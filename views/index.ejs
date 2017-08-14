@@ -1,0 +1,15 @@
+<% include globals/head %>
+
+    <div class="links">
+      <a href="/articles/create">Add Article</a>
+    </div>
+
+    <main>
+        <div class="articles__list">
+            <% articles.forEach(function(article) { %>
+            <%- include('partials/article-item', {article}); %>
+            <% }) %>
+        </div>
+    </main>
+
+<% include globals/foot %>
