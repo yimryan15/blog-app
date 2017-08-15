@@ -10,7 +10,7 @@
 
 var pg = require('pg');
 
-pg.defaults.ssl = true;
+// pg.defaults.ssl = true;
 pg.connect(process.env.DATABASE_URL, function(err, client) {
   if (err) throw err;
   console.log('Connected to postgres! Getting schemas...');
@@ -25,7 +25,6 @@ pg.connect(process.env.DATABASE_URL, function(err, client) {
 //     callback(err, res);
 //   })
 // }
-
 
 
 // const client = new pg.Pool({
