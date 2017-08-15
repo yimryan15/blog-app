@@ -7,15 +7,7 @@
 //   password: 'e437eaf2096db871d2ebd957384bdc54e9ac45d923ad00134cc11b2c2effbc92',
 //   port: 5432,
 // });
-
-var pg = require('pg');
-
-// pg.defaults.ssl = true;
-pg.connect(process.env.DATABASE_URL, function(err, client) {
-  if (err) throw err;
-  console.log('Connected to postgres! Getting schemas...');
-});
-
+//
 // module.exports.query = (queryString, queryParameters, callback) => {
 //   client.query(queryString, queryParameters, (err, res) => {
 //     if (err) {
@@ -26,6 +18,13 @@ pg.connect(process.env.DATABASE_URL, function(err, client) {
 //   })
 // }
 
+var pg = require('pg');
+
+pg.defaults.ssl = true;
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  if (err) throw err;
+  console.log('Connected to postgres! Getting schemas...');
+});
 
 // const client = new pg.Pool({
 //   user: 'postgres',
