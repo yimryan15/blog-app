@@ -11,20 +11,20 @@
 var pg = require('pg');
 
 pg.defaults.ssl = true;
-const client = pg.connect(process.env.DATABASE_URL, function(err, client) {
+pg.connect(process.env.DATABASE_URL, function(err, client) {
   if (err) throw err;
   console.log('Connected to postgres! Getting schemas...');
 });
 
-module.exports.query = (queryString, queryParameters, callback) => {
-  client.query(queryString, queryParameters, (err, res) => {
-    if (err) {
-      console.log('Error in DB: ' + err)
-      throw err
-    }
-    callback(err, res);
-  })
-}
+// module.exports.query = (queryString, queryParameters, callback) => {
+//   client.query(queryString, queryParameters, (err, res) => {
+//     if (err) {
+//       console.log('Error in DB: ' + err)
+//       throw err
+//     }
+//     callback(err, res);
+//   })
+// }
 
 
 
