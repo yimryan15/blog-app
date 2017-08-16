@@ -1,20 +1,22 @@
 const pg = require('pg');
-
-// const client = new pg.Pool({
-//   user: process.env.DB_USER,
-//   host: process.env.DB_HOST,
-//   database: process.env.DB_DATABASE,
-//   password: process.env.DB_PASS,
-//   port: process.env.DB_PORT,
-// });
+require('dotenv').config()
 
 const client = new pg.Pool({
-  user: 'rnojozpndkgomm',
-  host: 'ec2-23-21-186-138.compute-1.amazonaws.com',
-  database: 'dd3t143r30v9cl',
-  password: 'e437eaf2096db871d2ebd957384bdc54e9ac45d923ad00134cc11b2c2effbc92',
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASS,
+  port: process.env.DB_PORT,
 });
+
+//working
+// const client = new pg.Pool({
+//   user: 'rnojozpndkgomm',
+//   host: 'ec2-23-21-186-138.compute-1.amazonaws.com',
+//   database: 'dd3t143r30v9cl',
+//   password: 'e437eaf2096db871d2ebd957384bdc54e9ac45d923ad00134cc11b2c2effbc92',
+//   port: 5432,
+// });
 
 
 // const client = new pg.Pool({
