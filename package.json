@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-
   "repository": {
     "type": "git",
     "url": "git@personal:yimryan15/blog-app.git"
@@ -16,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "express-validator": "3.2.1",

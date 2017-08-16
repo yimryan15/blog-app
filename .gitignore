@@ -1,0 +1,4 @@
+.env
+node_modules
+.eslinrc.js
+package-lock.json
